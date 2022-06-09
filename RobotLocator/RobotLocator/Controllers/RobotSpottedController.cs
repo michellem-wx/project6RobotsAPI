@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using RobotLocator.Services;
+using System.Text.Json;
 
 namespace RobotLocator.Controllers
 {
@@ -13,16 +14,16 @@ namespace RobotLocator.Controllers
 
         // **EXAMPLE***
         // Hard coding a return value
-        private List<Location> _location = new List<Location>()
-        {
-            // Creating a new location
-            new Location()
-            {
-                LocationName = "Sydney Harbour",
-                Longitude = 8,
-                Latitude = 125,
-            }
-        };
+        //private List<Location> _location = new List<Location>()
+        //{
+        //    // Creating a new location
+        //    new Location()
+        //    {
+        //        LocationName = "Sydney Harbour",
+        //        Longitude = 8,
+        //        Latitude = 125,
+        //    }
+        //};
 
 
         // Inject LocationService into the constructor
@@ -34,11 +35,11 @@ namespace RobotLocator.Controllers
         }
 
         // Get endpoint
-        [HttpGet(Name = "RobotSpotted")]
-        public string Get()
-        {
-            return "Sydney Harbour";
-        }
+        //[HttpGet(Name = "RobotSpotted")]
+        //public string Get()
+        //{
+        //    return "Sydney Harbour";
+        //}
 
         //** POST ** //
         // Location class --> the property is location of the Robot
@@ -52,9 +53,18 @@ namespace RobotLocator.Controllers
         [HttpPost(Name = "RobotSpotted")]
         public async Task<string> Post(Location location)
         {
-            // someone makes a request using post, and triggers the method and calls the service method.
-            var x = await _service.GetNearestBodyOfWater(location);
-            return x;
+            // You can replace this with log critical
+            _logger.Log(LogLevel.Information, new EventId(), null, "Logged:" + location.LocationName, null);
+
+            // the GET response is stored in this variable 
+            string WaterSourceResponse = await _service.GetNearestBodyOfWater(location);
+
+            // converting the string to a JSON object in order to convert it back to a c# object
+            JsonSerializer.Serialize(WaterSourceResponse);
+
+            // DESERILISATION PART
+            WaterSourceLocation[] WaterSource = JsonSerializer.Deserialize<WaterSourceLocation[]>(WaterSourceResponse);
+            return $"Send robot to: {location.LocationName} is {WaterSource[0].display_name}";
         }
         #endregion
 

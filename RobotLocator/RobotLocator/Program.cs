@@ -1,5 +1,4 @@
 using RobotLocator.Services;
-using Microsoft.EntityFrameworkCore;
 
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -10,7 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IApplicationBuilder,ApplicationBuilder>();
+//builder.Services.AddScoped<IApplicationBuilder,ApplicationBuilder>();
 
 // IOC container - classes we're registering
 builder.Services.AddSingleton<HttpClient>();
