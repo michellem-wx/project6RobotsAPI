@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8UNZX6P80BX9N6TlhBgyqSHfAqXeC0UfChrhQp1WB7Y=",
+  "Source": "RobotLocator",
+  "BasePath": "_content/RobotLocator",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
