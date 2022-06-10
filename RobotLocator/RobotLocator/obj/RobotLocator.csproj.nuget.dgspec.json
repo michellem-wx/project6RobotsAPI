@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Michelle\\Documents\\Betelgeuse\\Projects\\project6RobotsAPI\\RobotLocator\\RobotLocator\\RobotLocator.csproj": {}
+    "C:\\Users\\Michelle\\Documents\\Betelgeuse\\project6RobotsAPI\\RobotLocator\\RobotLocator\\RobotLocator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Michelle\\Documents\\Betelgeuse\\Projects\\project6RobotsAPI\\RobotLocator\\RobotLocator\\RobotLocator.csproj": {
+    "C:\\Users\\Michelle\\Documents\\Betelgeuse\\project6RobotsAPI\\RobotLocator\\RobotLocator\\RobotLocator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michelle\\Documents\\Betelgeuse\\Projects\\project6RobotsAPI\\RobotLocator\\RobotLocator\\RobotLocator.csproj",
+        "projectUniqueName": "C:\\Users\\Michelle\\Documents\\Betelgeuse\\project6RobotsAPI\\RobotLocator\\RobotLocator\\RobotLocator.csproj",
         "projectName": "RobotLocator",
-        "projectPath": "C:\\Users\\Michelle\\Documents\\Betelgeuse\\Projects\\project6RobotsAPI\\RobotLocator\\RobotLocator\\RobotLocator.csproj",
+        "projectPath": "C:\\Users\\Michelle\\Documents\\Betelgeuse\\project6RobotsAPI\\RobotLocator\\RobotLocator\\RobotLocator.csproj",
         "packagesPath": "C:\\Users\\Michelle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michelle\\Documents\\Betelgeuse\\Projects\\project6RobotsAPI\\RobotLocator\\RobotLocator\\obj\\",
+        "outputPath": "C:\\Users\\Michelle\\Documents\\Betelgeuse\\project6RobotsAPI\\RobotLocator\\RobotLocator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Michelle\\AppData\\Roaming\\NuGet\\NuGet.Config",
